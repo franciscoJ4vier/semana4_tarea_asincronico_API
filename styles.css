@@ -1,0 +1,200 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1c1c1e;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #61dafb;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 350px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #2c2c2e;
+    color: #f5f5f5;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    background-color: #61dafb;
+    color: #1c1c1e;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #35b4e8;
+}
+
+/* Main layout (Horizontal) */
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+section {
+    background-color: #2c2c2e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+}
+
+/* Ajusta cada sección */
+#movie-list {
+    flex: 2;
+}
+
+#movie-details {
+    flex: 2;
+}
+
+#favorites {
+    flex: 1;
+    max-width: 300px;
+}
+
+/* Movie list */
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+#movies li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    cursor: pointer;
+}
+
+#movies img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#movies img:hover {
+    transform: scale(1.05);
+}
+
+#movies span {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #61dafb;
+    text-align: center;
+}
+
+/* Movie details */
+#details img {
+    max-width: 250px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#details h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #61dafb;
+}
+
+#details p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #d1d1d1;
+}
+
+/* Favorites */
+#favorites h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #61dafb;
+    text-align: center;
+}
+
+#favorites-list {
+    list-style: none;
+    padding: 0;
+}
+
+#favorites-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#favorites-list li img {
+    width: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#favorites-list li span {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+/* Buttons */
+button {
+    font-size: 1.1em;
+}
+
+#add-to-favorites {
+    margin-top: 20px;
+    background-color: #ff6b6b;
+    color: white;
+    width: 100%;
+}
+
+#add-to-favorites:hover {
+    background-color: #ff4a4a;
+}
+
+/* Hidden sections */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+
+    #favorites {
+        max-width: none;
+    }
+
+    header input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
